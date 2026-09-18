@@ -4,6 +4,7 @@
       <div>
         <Link
           :href="route('listing.show', {listing: listing.id})"
+          class="block no-underline text-gray-900 hover:text-indigo-600"
         >
           <Price :price="listing.price" class="text-2xl font-bold" />
           <ListingSpace :listing="listing" class="text-lg" />
