@@ -3,12 +3,12 @@
     <div class="container mx-auto">
       <nav class="p-4 flex items-center justify-between">
         <div class="text-lg font-medium">
-          <Link :href="route('listing.index')"class="no-underline text-gray-900 hover:text-indigo-600">
+          <Link :href="route('listing.index')"class="no-underline text-gray-900 dark:text-gray-100 hover:text-indigo-600">
             Listings
           </Link>
         </div>
         <div class="text-xl text-indigo-600 dark:text-indigo-300 font-bold text-center">
-          <Link :href="route('listing.index')"class="no-underline text-xl font-bold tracking-tight text-gray-900 hover:text-indigo-600">
+          <Link :href="route('listing.index')"class="no-underline text-xl font-bold tracking-tight text-gray-900 dark:text-gray-100 hover:text-indigo-600">
             LaravelLiew
           </Link>
         </div>

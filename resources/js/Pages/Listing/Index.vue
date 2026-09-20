@@ -1,43 +1,11 @@
 <template>
    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
-    <Box v-for="listing in listings" :key="listing.id">
-      <div>
-        <Link
-          :href="route('listing.show', {listing: listing.id})"
-          class="block no-underline text-gray-900 hover:text-indigo-600"
-        >
-          <Price :price="listing.price" class="text-2xl font-bold" />
-          <ListingSpace :listing="listing" class="text-lg" />
-          <ListingAddress :listing="listing" class="text-gray-500" />
-        </Link>
-      </div>
-      <div class="mt-3 flex items-center gap-3">
-  <Link
-    :href="route('listing.edit', { listing: listing.id })"
-    class="no-underline text-indigo-600 hover:text-indigo-500"
-  >
-    Edit
-  </Link>
-
-  <Link
-    :href="route('listing.destroy', { listing: listing.id })"
-    method="DELETE"
-    as="button"
-    class="text-red-500 hover:text-red-400"
-  >
-    Delete
-  </Link>
-</div>
-    </Box>
+   <Listing v-for="listing in listings" :key="listing.id" :listing="listing" />
   </div>
 </template>
 
 <script setup>
-import {Link} from '@inertiajs/vue3'
-import ListingAddress from '@/Components/ListingAddress.vue'
-import Box from '@/Components/UI/Box.vue'
-import ListingSpace from '@/Components/ListingSpace.vue'
-import Price from '@/Components/Price.vue'
+import Listing from '@/Pages/Listing/Index/Components/Listing.vue'
 defineProps({
   listings: Array,
 })
